@@ -7,11 +7,11 @@ from torch.utils.data import DataLoader
 from dataclasses import dataclass
 
 # ============================================================
-# 1. Multi-Crop (2 global + 2 local) — fits 11GB GPU
+# 1. Multi-Crop (2 global + 4 local) — fits 11GB GPU
 # ============================================================
 
 class MultiCropTransform:
-    def __init__(self, img_size=32, num_local_crops=2):
+    def __init__(self, img_size=32, num_local_crops=4):
         self.num_local = num_local_crops
 
         self.global_t = transforms.Compose([
