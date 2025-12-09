@@ -114,30 +114,15 @@ Produces:
 * `linear_eval_curves.png`
 * `tsne_test_embeddings.png`
 * `gradcam_viz/*.png`
-
-```bash
-python Downstream_resnet18.py
+* 
+```run the notebook cells sequantially
+Downstream_resnet18.ipynb
 ```
+## **3.2 Downstream — ResNet-50 (with t-SNE, loss curves)**
 
-## **3.2 Downstream — ResNet-50 (with t-SNE)**
-
-```bash
-python Downstream_resnet50.py
+```run the notebook cells sequantially
+Downstream_resnet50.ipynb
 ```
-
-### **Slurm example**
-
-```bash
-sbatch --job-name=down18 \
-       --partition=gpu_q \
-       --gres=gpu:1 \
-       --cpus-per-task=4 \
-       --mem=12G \
-       --time=12:00:00 \
-       Downstream_resnet18.py
-```
-
----
 
 # **4. Supervised Baseline Training**
 
@@ -175,11 +160,3 @@ sbatch --job-name=sup18 \
 | Supervised                    | `supervised_resnet18_multicropstyle.pt`, training curves             |
 
 ---
-
-If you want, I can also generate:
-
-✅ A polished final README version
-✅ A project tree layout
-✅ Badges (GPU-enabled, Python version, etc.)
-
-Just tell me!
